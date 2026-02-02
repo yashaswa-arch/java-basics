@@ -1,0 +1,3 @@
+number a entered   4005.0
+nmber entered 89.0
+45.0 + 45.0 + 78.0 = 168.0

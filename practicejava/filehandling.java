@@ -1,42 +1,59 @@
-import java.io.FileWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
-//| Class                                  | Purpose                                                             |
-// | -------------------------------------- | ------------------------------------------------------------------- |
-// | `File`                                 | Represents a file or directory path (create/delete/check existence) |
-// | `FileWriter`                           | Used to write text to a file                                        |
-// | `FileReader`                           | Used to read text from a file                                       |
-// | `BufferedReader`                       | Reads text efficiently (line-by-line)                               |
-// | `Scanner`                              | Can read user input **and** read from a file                        |
-// | `FileOutputStream` / `FileInputStream` | For binary data (images, PDFs, etc.)                                |
+
+// FILE HANDLING CLASSES
+// ┌─────────────────────┬──────────────────────────────────────┐
+// │ Class               │ Purpose                              │
+// ├─────────────────────┼──────────────────────────────────────┤
+// │ File                │ File/directory path operations       │
+// │ FileWriter          │ Write text to file                   │
+// │ FileReader          │ Read text from file                  │
+// │ BufferedReader      │ Efficient line-by-line reading       │
+// │ Scanner             │ Read user input & file content       │
+// │ FileOutputStream    │ Write binary data (images, PDFs)     │
+// │ FileInputStream     │ Read binary data                     │
+// └─────────────────────┴──────────────────────────────────────┘
 
 public class filehandling {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        
+        // WRITE DATA TO FILE
+        // try {
+        //     System.out.println("Enter your name:");
+        //     String name = sc.nextLine();
+        //     System.out.println("Enter your age:");
+        //     int age = sc.nextInt();
+        //     sc.nextLine();
+        //     System.out.println("Enter city:");
+        //     String city = sc.nextLine();
+        //
+        //     FileWriter writer = new FileWriter("userdata.txt", true);  // append mode
+        //     writer.write("--- Full Details ---\n");
+        //     writer.write("Name: " + name + "\n");
+        //     writer.write("Age: " + age + "\n");
+        //     writer.write("City: " + city + "\n");
+        //     writer.close();
+        // } catch (Exception e) {
+        //     System.out.println("An error occurred");
+        //     e.printStackTrace();
+        // }
+        // sc.close();
+
+        // READ DATA FROM FILE
         try {
-            System.out.println("please enter you name");
-            String name=sc.nextLine();
-
-            System.out.println("please enter your age");
-            int age=sc.nextInt();
-            sc.nextLine();
-            System.out.println("please enter city");
-            String city=sc.nextLine();
-
-
-           FileWriter Writer=new FileWriter("userdata.txt",true) ;
-
-           //write data in txt using the fromat
-           Writer.write(" the full details\n" );
-           Writer.write("Name "+name+"\n");
-           Writer.write("age  "+age+"\n");
-           Writer.write("city  "+city+"\n");
-        Writer.close();
-           } catch (Exception e) {
-            System.out.println("an error occured");
-         e.printStackTrace();//often used at the time of production for detail error otherwisw you can just write the exception what it is
+            File read = new File("userdata.txt");
+            Scanner sc = new Scanner(read);
+            
+            System.out.println("=== Reading Data ===");
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                System.out.println(line);
+            }
+            sc.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File is missing or corrupt");
+            e.printStackTrace();
         }
-
-sc.close();
     }
-    
 }

@@ -1,103 +1,92 @@
+import java.util.Arrays;
 
 public class array {
     public static void main(String[] args) {
-       //DYANIMC ITIALIZATION OF ARRAY
-       
-        // int[]num = new int[7];
+        
+        // DYNAMIC INITIALIZATION OF ARRAY
+        // int[] num = new int[7];
         // System.out.println(num);
 
-        //STATIC INTIALIZATION AND ACCESSING ELEMENTS
-      //  int[]num={1,2,3,4,5,6};
+        // STATIC INITIALIZATION AND ACCESSING ELEMENTS
+        // int[] num = {1, 2, 3, 4, 5, 6};
         // System.out.println(num[2]);
         // System.out.println(num[4]);
+        // System.out.println(Arrays.toString(num));
 
-       // System.out.println(Arrays.toString(num));
-
-       //STATIC ARRAY INTIALIZATIOn AND ACCESSING
-
-// int[][]matrix={
-//     {1,2,3},
-//     {4,5,6},
-//     {7,8,9}
-
-// };
-// System.out.println(matrix[1][0]);
-
-//DYANMIC ARRAY INIUTYALIZATIOn
-
-// int[][]num=new int[3][4];
-// System.out.println(num); 
-
-//ITERATION OF ARRAYS USING FOR LOOP
-// int[]numbers={1,2,3,4,5,6};
-// for(int num:numbers){   //direct access of each element in an array
-// System.out.print(num+" ");
-// }
-
- //operations on array
- 
-//  int[]a={1,2,3,4,5,6,7,8,9,0};
-//  int sum =0;
-// for(int i = 0;i<a.length;i++){
-// sum+=a[i];
-    
-// }
-// System.out.println(sum);
-
-//REVERSING AN ARRAY
-        // Original array
-        // int[] numbers = {1, 2, 3, 4, 5,6,7,8,9};
-        
-        // // Initialize pointers
-        // int start = 0;
-        // int end = numbers.length - 1;
-        
-        // // Reverse the array
-        // while (start < end) {
-        //     // Swap the elements at start and end
-        //     int temp = numbers[start];
-        //     numbers[start] = numbers[end];
-        //     numbers[end] = temp;
-            
-        //     // Move pointers
-        //     start++;
-        //     end--;
-        // }
-        
-        // // Print the reversed array
-        // System.out.println("Reversed array:");
-        // for (int num : numbers) {
-        //     System.out.print(num + " ");
-        // }
-
+        // 2D ARRAY - STATIC INITIALIZATION
         // int[][] matrix = {
         //     {1, 2, 3},
         //     {4, 5, 6},
         //     {7, 8, 9}
         // };
-        
-        // // Print all elements in the matrix using nested loops
+        // System.out.println(matrix[1][0]);
+
+        // 2D ARRAY - DYNAMIC INITIALIZATION
+        // int[][] num = new int[3][4];
+        // System.out.println(num);
+
+        // ITERATION OF ARRAYS USING FOR-EACH LOOP
+        // int[] numbers = {1, 2, 3, 4, 5, 6};
+        // for (int num : numbers) {
+        //     System.out.print(num + " ");
+        // }
+
+        // SUM OF ARRAY ELEMENTS
+        // int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        // int sum = 0;
+        // for (int i = 0; i < a.length; i++) {
+        //     sum += a[i];
+        // }
+        // System.out.println(sum);
+
+        // REVERSING AN ARRAY
+        // int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        // int start = 0;
+        // int end = numbers.length - 1;
+        // while (start < end) {
+        //     int temp = numbers[start];
+        //     numbers[start] = numbers[end];
+        //     numbers[end] = temp;
+        //     start++;
+        //     end--;
+        // }
+        // System.out.println("Reversed array:");
+        // for (int num : numbers) {
+        //     System.out.print(num + " ");
+        // }
+
+        // 2D ARRAY - PRINT ALL ELEMENTS
+        // int[][] matrix = {
+        //     {1, 2, 3},
+        //     {4, 5, 6},
+        //     {7, 8, 9}
+        // };
         // for (int i = 0; i < matrix.length; i++) {
         //     for (int j = 0; j < matrix[i].length; j++) {
         //         System.out.print(matrix[i][j] + " ");
         //     }
-        //   System.out.println();  // New line after each row
+        //     System.out.println();
         // }
-        
-        //que on array to print all even numbers
-        // int a[]={1,2,3,4,5,6};
-        // for(int i=0;i<a.length;i++){
-        //   if(a[i]%2==0){
-        //     System.out.println(a[i]);
-        //   }
+
+        // PRINT ALL EVEN NUMBERS
+        // int a[] = {1, 2, 3, 4, 5, 6};
+        // for (int i = 0; i < a.length; i++) {
+        //     if (a[i] % 2 == 0) {
+        //         System.out.println(a[i]);
+        //     }
         // }
-//que on count of array
-// int a[]={1,2,3,2,4,2};
-// int count=0;
-// for(int i =0;i<a.length;i++){
-// if(a[i]==2){
-//   count++;
-//   System.out.println(a[i]);
+
+        // COUNT OCCURRENCES
+        // int a[] = {1, 2, 3, 2, 4, 2};
+        // int count = 0;
+        // for (int i = 0; i < a.length; i++) {
+        //     if (a[i] == 2) {
+        //         count++;
+        //         System.out.println(a[i]);
+        //     }
+        // }
+    }
+}
 // }
 // }
 // System.out.println("2 occurs"+count+"times");
