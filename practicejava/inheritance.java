@@ -1,4 +1,4 @@
-// inheritance 
+// inheritance
 // child class inherits property from their parent class
 // types of inheritance single multilevel heirarchial
 
@@ -21,7 +21,7 @@
 //     }
 // }
 
-//Mutlilevel inheritance
+// Mutlilevel inheritance
 //  class Animal {
 //      void eat() {
 //         System.out.println("I can eat");
@@ -88,7 +88,6 @@
 //     void his(String specialization,float salary){
 //         this.specialization=specialization;
 //         this.salary=salary;
-
 
 //     }void info2(){
 //      System.out.println("professor is in"+ specialization+"\nwith sal"+salary);

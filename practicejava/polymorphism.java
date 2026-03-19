@@ -1,7 +1,7 @@
-//#POLYMORPHISM means many form 
+// #POLYMORPHISM means many form
 // there can be two types of polymorphism compile time,run time
 // compile time generally refers to methosd overloading ex code
-//compile time example
+// compile time example
 // import java.util.Scanner;
 // class calculator{
 //     int add(int a,int b){
@@ -49,16 +49,15 @@
 //         System.out.println("Invalid choice");
 //         break;
 //     }
-    
+
 // }
 // sc.close();
 // }
 // }
 
-
-//run time ploymorphism refers method OVERRIDING
-//method overriding means changing the method of parent class by sub class
-//ex code
+// run time ploymorphism refers method OVERRIDING
+// method overriding means changing the method of parent class by sub class
+// ex code
 
 // import java.util.Scanner;
 
@@ -100,10 +99,10 @@
 //         myAnimal.sound(); // Calls the overridden method at runtime
 //     }
 // }
-// super keyword 
-//used for refers to immediate parent class 
-//access parent class varibles and methods
-//invoke parent class contructor
+// super keyword
+// used for refers to immediate parent class
+// access parent class varibles and methods
+// invoke parent class contructor
 // import java.util.Scanner;
 
 // class Person {
@@ -146,8 +145,8 @@
 //     }
 // }
 
-//FINAL KEYWORD
-//used to prevent method overriding iheritance reassignment of variable
+// FINAL KEYWORD
+// used to prevent method overriding iheritance reassignment of variable
 // class Base {
 //     final void show() {
 //         System.out.println("Base show method (cannot be overridden)");

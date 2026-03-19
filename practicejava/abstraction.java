@@ -65,7 +65,8 @@
 //         String method = sc.next();
 
 //         Payment payment; // interface reference//Payment is an interface (a contract).
-// //payment is a reference variable that can point to any object of a class which implements Payment. 
+// //payment is a reference variable that can point to any object of a class which implements
+// Payment.
 
 //         if (method.equalsIgnoreCase("card")) {
 //             System.out.print("Enter 16-digit card number: ");
@@ -91,7 +92,7 @@
 //     }
 // }
 
-//que on interface 
+// que on interface
 // 🔹 Problem 3 — Abstraction with Interface (Playable)
 
 // Create an interface Playable with method play().
@@ -110,44 +111,47 @@ import java.util.Scanner;
 
 // Step 1: Interface (contract)
 interface Playable {
-    void play(String fileName); // says "every playable thing must have play()"
+  void play(String fileName); // says "every playable thing must have play()"
 }
 
 // Step 2: Audio class implements Playable
 class Audio implements Playable {
-    public void play(String fileName) {
-        System.out.println("Playing audio file: " + fileName);
-    }
+  @Override
+  public void play(String fileName) {
+    System.out.println("Playing audio file: " + fileName);
+  }
 }
 
 // Step 3: Video class implements Playable
 class Video implements Playable {
-    public void play(String fileName) {
-        System.out.println("Playing video file: " + fileName);
-    }
+  @Override
+  public void play(String fileName) {
+    System.out.println("Playing video file: " + fileName);
+  }
 }
 
 // Step 4: Main program
 public class abstraction {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    try (Scanner sc = new Scanner(System.in)) {
 
-        System.out.print("Enter file name to play: ");
-        String fileName = sc.nextLine();
+      System.out.print("Enter file name to play: ");
+      String fileName = sc.nextLine();
 
-        Playable player; // interface reference
+      Playable player; // interface reference
 
-        // Choose implementation based on extension
-        if (fileName.endsWith(".mp3")) {
-            player = new Audio();   // use Audio class
-        } else if (fileName.endsWith(".mp4")) {
-            player = new Video();   // use Video class
-        } else {
-            System.out.println("❌ Unsupported file format.");
-            return;
-        }
+      // Choose implementation based on extension
+      if (fileName.endsWith(".mp3")) {
+        player = new Audio(); // use Audio class
+      } else if (fileName.endsWith(".mp4")) {
+        player = new Video(); // use Video class
+      } else {
+        System.out.println("❌ Unsupported file format.");
+        return;
+      }
 
-        // Call the method (same for both classes)
-        player.play(fileName);
+      // Call the method (same for both classes)
+      player.play(fileName);
     }
+  }
 }

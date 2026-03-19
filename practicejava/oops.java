@@ -1,6 +1,6 @@
-//class and obejcts
-//class
-//its a user defined blueprint 
+// class and obejcts
+// class
+// its a user defined blueprint
 // import java.util.Scanner;
 
 // class House {// we created a class named house which has area and category
@@ -43,10 +43,10 @@
 //     }
 // }
 
-//constructor
-//has same name as that of class
-//special method intizalized autmoatically when obejct is created
-//now we will again make this program using contructor
+// constructor
+// has same name as that of class
+// special method intizalized autmoatically when obejct is created
+// now we will again make this program using contructor
 // import java.util.Scanner;
 
 // // Define the class
@@ -62,7 +62,8 @@
 
 //     // Method to show a message
 //     void automaticscan() {
-//         System.out.println("Showing results for a " + category + " in " + area + " sq.ft area...");
+//         System.out.println("Showing results for a " + category + " in " + area + " sq.ft
+// area...");
 //     }
 // }
 
@@ -85,7 +86,7 @@
 
 //         myhouse.automaticscan();
 //     }
-//}
+// }
 // import java.util.Scanner;
 
 // // Class to represent Apartment
@@ -131,8 +132,8 @@
 //         myApartment.displayDetails();
 //     }
 // }
-//USE OF contructor method overlaoding and some practice questions....
-//q1--Q1. Create an AreaCalculator class
+// USE OF contructor method overlaoding and some practice questions....
+// q1--Q1. Create an AreaCalculator class
 // Overload a method area() to calculate:
 // Area of a circle: area(double radius)
 // Area of a rectangle: area(int length, int breadth)
@@ -193,17 +194,17 @@
 // sc.close(); // Good practice to close scanner
 // }
 // }
-//q2
+// q2
 // // Q2. Create a Greeting class
 // Overload the method greet():
 // greet() – prints “Hello!”
-//greet(String name) – prints “Hello, [name]!”
-//Hint: Think of function default messages vs customized greeting.
+// greet(String name) – prints “Hello, [name]!”
+// Hint: Think of function default messages vs customized greeting.
 
 // import java.util.Scanner;
 // // Class for greeting with overloaded methods
 // class Greeting {
-    
+
 //     // No-parameter greet method
 //     void greet() {
 //         System.out.println("Hello!");
@@ -233,7 +234,7 @@
 //         sc.close(); // Good practice
 //     }
 // }
-//Q3. Bank Interest Calculator
+// Q3. Bank Interest Calculator
 // Create a method calculateInterest:
 
 // calculateInterest(double principal) → fixed 5% interest
@@ -288,7 +289,8 @@
 //                 // Case 2: Custom simple interest
 //                 System.out.println("Enter custom interest rate:");
 //                 double customRate = sc.nextDouble(); // Use double for accuracy
-//                 System.out.println("Interest at " + customRate + "%: " + it.calculateInterest(amount, customRate));
+//                 System.out.println("Interest at " + customRate + "%: " +
+// it.calculateInterest(amount, customRate));
 //                 break;
 
 //             case 3:

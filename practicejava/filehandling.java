@@ -16,44 +16,39 @@ import java.util.Scanner;
 // └─────────────────────┴──────────────────────────────────────┘
 
 public class filehandling {
-    public static void main(String[] args) {
-        
-        // WRITE DATA TO FILE
-        // try {
-        //     System.out.println("Enter your name:");
-        //     String name = sc.nextLine();
-        //     System.out.println("Enter your age:");
-        //     int age = sc.nextInt();
-        //     sc.nextLine();
-        //     System.out.println("Enter city:");
-        //     String city = sc.nextLine();
-        //
-        //     FileWriter writer = new FileWriter("userdata.txt", true);  // append mode
-        //     writer.write("--- Full Details ---\n");
-        //     writer.write("Name: " + name + "\n");
-        //     writer.write("Age: " + age + "\n");
-        //     writer.write("City: " + city + "\n");
-        //     writer.close();
-        // } catch (Exception e) {
-        //     System.out.println("An error occurred");
-        //     e.printStackTrace();
-        // }
-        // sc.close();
+  public static void main(String[] args) {
 
-        // READ DATA FROM FILE
-        try {
-            File read = new File("userdata.txt");
-            Scanner sc = new Scanner(read);
-            
-            System.out.println("=== Reading Data ===");
-            while (sc.hasNextLine()) {
-                String line = sc.nextLine();
-                System.out.println(line);
-            }
-            sc.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("File is missing or corrupt");
-            e.printStackTrace();
+    // WRITE DATA TO FILE
+    // try (Scanner sc = new Scanner(System.in);
+    //     FileWriter writer = new FileWriter("userdata.txt", true)) {
+    //   System.out.println("Enter your name:");
+    //   String name = sc.nextLine();
+    //   System.out.println("Enter your age:");
+    //   int age = sc.nextInt();
+    //   sc.nextLine();
+    //   System.out.println("Enter city:");
+    //   String city = sc.nextLine();
+    //
+    //   writer.write("--- Full Details ---\n");
+    //   writer.write("Name: " + name + "\n");
+    //   writer.write("Age: " + age + "\n");
+    //   writer.write("City: " + city + "\n");
+    // } catch (Exception e) {
+    //   System.out.println("An error occurred");
+    // }
+
+    // READ DATA FROM FILE
+    try {
+      File read = new File("userdata.txt");
+      try (Scanner sc = new Scanner(read)) {
+        System.out.println("=== Reading Data ===");
+        while (sc.hasNextLine()) {
+          String line = sc.nextLine();
+          System.out.println(line);
         }
+      }
+    } catch (FileNotFoundException e) {
+      System.out.println("File is missing or corrupt");
     }
+  }
 }

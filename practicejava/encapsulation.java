@@ -1,4 +1,3 @@
-import java.util.Scanner;
 //     private String name;
 //     private Double balance;
 //     // Constructor for modification kept public so it can be accessed from outside the class
@@ -8,7 +7,7 @@ import java.util.Scanner;
 //     }
 // //getters for name
 // public String getname(){
-// return name;    
+// return name;
 // }
 // //getter for balance
 // public Double getbalance(){
@@ -19,7 +18,8 @@ import java.util.Scanner;
 //    public void deposit(double depositmoney) {
 //     if (depositmoney > 0) {
 //         balance += depositmoney;
-//         System.out.printf("Rupees %.2f credited to account. Total balance: %.2f\n", depositmoney, balance);
+//         System.out.printf("Rupees %.2f credited to account. Total balance: %.2f\n", depositmoney,
+// balance);
 //     } else {
 //         System.out.println("Invalid deposit amount!");
 //     }
@@ -46,10 +46,10 @@ import java.util.Scanner;
 //         System.out.println("enetr opening balance");
 //         Double balance=sc.nextDouble();
 //         Bankaccount ba=new Bankaccount(name, balance);
-        
+
 //         //menu for user
 //  int choice = 0;
-//         do { 
+//         do {
 //             System.out.println(" banking menu");
 //             System.out.println("1 view balance");
 //             System.out.println("2 deposit");
@@ -81,18 +81,13 @@ import java.util.Scanner;
 //                  System.out.println("Invalid choice.");
 //                 }
 
-               
-            
-        
-            
 //         } while (choice!=4);
 //         sc.close();
 //     }
 // }
 // }
 
-
-//🔹 Problem 1 — Encapsulation (Student Record)
+// 🔹 Problem 1 — Encapsulation (Student Record)
 
 // Create a class Student with private fields:
 
@@ -113,77 +108,80 @@ import java.util.Scanner;
 import java.util.Scanner;
 
 class Student {
-    // private fields
-    private String name;
-    private int age;
-    private double marks;
+  // private fields
+  private String name;
+  private int age;
+  private double marks;
 
-    // Constructor uses setters (so validation is applied)
-    public Student(String name, int age, double marks) {
-        setName(name);
-        setAge(age);
-        setMarks(marks);
-    }
+  // Constructor uses setters (so validation is applied)
+  public Student(String name, int age, double marks) {
+    this.name = name;
+    this.age = age;
+    this.marks = marks;
+  }
 
-    // Getters
-    public String getName() {
-        return name;
-    }
-    public int getAge() {
-        return age;
-    }
-    public double getMarks() {
-        return marks;
-    }
+  // Getters
+  public String getName() {
+    return name;
+  }
 
-    // Setters with validation
-    public void setName(String fname) {
-        if (fname == null || fname.trim().isEmpty()) {
-            System.out.println("❌ Name cannot be empty.");
-        } else {
-            this.name = fname;
-        }
-    }
+  public int getAge() {
+    return age;
+  }
 
-    public void setAge(int age) {
-        if (age > 5) {
-            this.age = age;
-        } else {
-            System.out.println("❌ Age must be greater than 5.");
-        }
-    }
+  public double getMarks() {
+    return marks;
+  }
 
-    public void setMarks(double marks) {
-        if (marks >= 0 && marks <= 100) {
-            this.marks = marks;
-        } else {
-            System.out.println("❌ Marks must be between 0 and 100.");
-        }
+  // Setters with validation
+  public void setName(String fname) {
+    if (fname == null || fname.trim().isEmpty()) {
+      System.out.println("❌ Name cannot be empty.");
+    } else {
+      this.name = fname;
     }
+  }
+
+  public void setAge(int age) {
+    if (age > 5) {
+      this.age = age;
+    } else {
+      System.out.println("❌ Age must be greater than 5.");
+    }
+  }
+
+  public void setMarks(double marks) {
+    if (marks >= 0 && marks <= 100) {
+      this.marks = marks;
+    } else {
+      System.out.println("❌ Marks must be between 0 and 100.");
+    }
+  }
 }
 
 public class encapsulation {
-    public static void main(String[] args) {
-        System.out.println("🌟 Good morning! Welcome to the student portal 🌟");
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    System.out.println("🌟 Good morning! Welcome to the student portal 🌟");
+    try (Scanner sc = new Scanner(System.in)) {
 
-        // Input
-        System.out.print("Enter your name: ");
-        String name = sc.nextLine();
+      // Input
+      System.out.print("Enter your name: ");
+      String name = sc.nextLine();
 
-        System.out.print("Enter your age: ");
-        int age = sc.nextInt();
+      System.out.print("Enter your age: ");
+      int age = sc.nextInt();
 
-        System.out.print("Enter your marks: ");
-        double marks = sc.nextDouble();
+      System.out.print("Enter your marks: ");
+      double marks = sc.nextDouble();
 
-        // Create student object (constructor uses validation)
-        Student ss = new Student(name, age, marks);
+      // Create student object (constructor uses validation)
+      Student ss = new Student(name, age, marks);
 
-        // Display details
-        System.out.println("\n✅ Student Details:");
-        System.out.println("Name  : " + ss.getName());
-        System.out.println("Age   : " + ss.getAge());
-        System.out.println("Marks : " + ss.getMarks());
+      // Display details
+      System.out.println("\n✅ Student Details:");
+      System.out.println("Name  : " + ss.getName());
+      System.out.println("Age   : " + ss.getAge());
+      System.out.println("Marks : " + ss.getMarks());
     }
+  }
 }
